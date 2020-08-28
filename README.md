@@ -33,7 +33,7 @@ start_date = pd.Timestamp('2010-01-01', tz='America/New_York').isoformat()
 end_date = pd.Timestamp('2020-05-01', tz='America/New_York').isoformat()
 ```
 
-#calling 2010's top ten companies by size ticker
+## calling 2010's top ten companies by size ticker ##
 ```
 df_spy = api.get_barset(
     ticker,
@@ -46,7 +46,7 @@ df_spy = api.get_barset(
 ).df
 ```
 
-# Only comparing closing value
+## Only comparing closing value ##
 ```
 df_spy = df_spy.drop(
     columns=['open', 'high', 'low', 'volume'],
