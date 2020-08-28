@@ -24,7 +24,7 @@ usa_house_pct.reset_index(inplace = True)
 usa_house_pct.head()
 ```
 
-## pulling in the stock market information ##
+## Pulling in the stock market information ##
 
 ```
 ticker = ["SPY"]
@@ -33,7 +33,7 @@ start_date = pd.Timestamp('2010-01-01', tz='America/New_York').isoformat()
 end_date = pd.Timestamp('2020-05-01', tz='America/New_York').isoformat()
 ```
 
-## calling 2010's top ten companies by size ticker ##
+## Calling 2010's top ten companies by size ticker ##
 ```
 df_spy = api.get_barset(
     ticker,
@@ -62,7 +62,7 @@ monthly_spy = dfspy['SPY'].resample('M').mean()
 monthly_spy
 ```
 
-## Bringing the two markets together to asses the markets against each other ##
+## Bringing the two markets together to asses the markets against each other. ##
 
 ```
 Housing_vs_Stocks = pd.concat([usa_house_pct.reset_index(drop=True),spy_pct.reset_index(drop=True)], axis=1)
@@ -71,10 +71,10 @@ Housing_vs_Stocks.rename(columns={'U.S.A.':'US Housing Maket','close': 'Stock In
 Housing_vs_Stocks.head()
 ```
 
-## which one is more volatile ##
+## Which one is more volatile? ##
 
 ```
-#From the above graph vlatility appears to be the name of the game for the stock market. Lets double check. 
+#From the above graph volatility appears to be the name of the game for the stock market. Lets double check. 
 monthly_std = Housing_vs_Stocks.std()
 monthly_std_visule = (1 + monthly_std).cumprod()
 monthly_std_visule.hvplot.scatter(title= 'Volatility comparison')
