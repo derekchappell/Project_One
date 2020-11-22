@@ -90,6 +90,9 @@ monthly_spy
 ```
 [.](<a href="https://imgur.com/eWxJOyj"><img src="https://i.imgur.com/eWxJOyj.jpg" title="source: imgur.com" /></a>)
 
+## Lets take a look at how spy has been performing over the last decade ##
+
+[.](<a href="https://imgur.com/JP1GcFg"><img src="https://i.imgur.com/JP1GcFg.jpg" title="source: imgur.com" /></a>)
 
 ## Bringing the two markets together to asses the markets against each other. ##
 
