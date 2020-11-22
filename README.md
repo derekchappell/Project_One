@@ -1,4 +1,4 @@
-![.](<a href="https://imgur.com/MpkfU6j"><img src="https://i.imgur.com/MpkfU6j.png" title="source: imgur.com" /></a>)
+! [.](<a href="https://imgur.com/MpkfU6j"><img src="https://i.imgur.com/MpkfU6j.png" title="source: imgur.com" /></a>)
 
  - This is a comparison of the housing market and the stock market from a high level looking at volatility as well as returns over the last decade 
  
