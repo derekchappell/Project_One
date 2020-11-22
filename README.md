@@ -1,6 +1,25 @@
 [.](<a href="https://imgur.com/MpkfU6j"><img src="https://i.imgur.com/MpkfU6j.png" title="source: imgur.com" /></a>)
 
  - This is a comparison of the housing market and the stock market from a high level looking at volatility as well as returns over the last decade 
+ 
+## First things first lets get out relevant libraries loaded in here, this is after one of the most potent atributes of python, abundent libraries to accomplish everything ##
+
+```python
+import panel as pn
+import os
+import pandas as pd
+import matplotlib.pyplot as plt
+import hvplot.pandas
+import panel as pn
+import plotly.express as px
+from dotenv import load_dotenv
+from panel.interact import interact
+import requests
+import numpy as np
+import alpaca_trade_api as tradeapi
+pn.extension('plotly')
+%matplotlib inline
+```
 
 ## The U.S. Housing market according to the Case Shiller Index provided by the FED looking at 20 cities ##
 
@@ -16,6 +35,15 @@ df.rename(columns={'PHXRNSA': 'Phoenix', 'ATXRSA': 'Atlanta', 'BOXRSA': 'Boston'
 df
 ```
 [.](<a href="https://imgur.com/RPHsLql"><img src="https://i.imgur.com/RPHsLql.jpg" title="source: imgur.com" /></a>)
+
+## Lets look at housing prices by city utilizing hv plot
+
+```python
+cities = df.columns.tolist()
+def myplot(city):
+    return df.hvplot(x='DATE', y=city, rot=90, width = (1000), height = (500), title = 'Housing price data by city over the last 10 years')
+```
+[.](<a href="https://imgur.com/SEvrVkW"><img src="https://i.imgur.com/SEvrVkW.jpg" title="source: imgur.com" /></a>)
 
 ## In Order to make an Apples to Apples comparison we must convert the data from FRED to a percent change, the dates not alligning correctly will be dealt with below ##
 
