@@ -76,10 +76,9 @@ Housing_vs_Stocks.head()
 ## Which one is more volatile? ##
 
 ```
-#From the above graph volatility appears to be the name of the game for the stock market. Lets double check. 
-monthly_std = Housing_vs_Stocks.std()
-monthly_std_visule = (1 + monthly_std).cumprod()
-monthly_std_visule.hvplot.scatter(title= 'Volatility comparison')
+cumulative_returns = (1 + Housing_vs_Stocks).cumprod()
+cumulative_returns.hvplot(y=['U.S.A', 'Stock Index'],width = (1000), height = (500), xticks = (10),
+             value_label='Observed Cumulative Returns')
 ```
 [.](<a href="https://imgur.com/y4JgTV1"><img src="https://i.imgur.com/y4JgTV1.jpg" title="source: imgur.com" /></a>)
 
