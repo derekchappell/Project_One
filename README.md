@@ -1,6 +1,7 @@
 ! [.](<a href="https://imgur.com/MpkfU6j"><img src="https://i.imgur.com/MpkfU6j.png" title="source: imgur.com" /></a>)
 
  - This is a comparison of the housing market and the stock market from a high level looking at volatility as well as returns over the last decade 
+  - [A slide show created for our presentation can be viewed here](https://docs.google.com/presentation/d/1UjJ6-egfuEn-liKTrW14ksIA784jysgqesAFvVve0zo/edit?usp=sharing)
  
 ## First things first lets get out relevant libraries loaded in here, this is after one of the most potent atributes of python, abundent libraries to accomplish everything ##
 
